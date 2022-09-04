@@ -1,6 +1,7 @@
 package test;
 
 import Model.K210Conv2d;
+import org.junit.Test;
 
 public class MoblieNetV1 {
     double[][] PWweight = {{1}};
@@ -21,5 +22,11 @@ public class MoblieNetV1 {
     double[][] psum;
     double[][] result;
 
-    //PW卷积;
+    @Test
+    public void Simulator() throws Exception {
+//        普通卷积
+        psum = K210Conv2d.SimulatorConv2d(ifmap,Weight);
+//        PW卷积
+        result = K210Conv2d.SimulatorPWConv2d(psum,PWweight);
+    }
 }
