@@ -1,5 +1,7 @@
 package test;
 
+import Model.K210Conv2d;
+
 public class MoblieNetV1 {
     double[][] PWweight = {{1}};
     double[][] Weight = {
@@ -16,4 +18,8 @@ public class MoblieNetV1 {
     };
     int PaddingNumber1 = 0;
     int PaddingNumber2 = 1;
+    double[][] psum;
+    double[][] result;
+
+    //PW卷积;
 }
