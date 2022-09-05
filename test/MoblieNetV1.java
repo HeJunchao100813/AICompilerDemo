@@ -3,6 +3,8 @@ package test;
 import Model.K210Conv2d;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class MoblieNetV1 {
     double[][] PWweight = {{1}};
     double[][] Weight = {
@@ -28,5 +30,8 @@ public class MoblieNetV1 {
         psum = K210Conv2d.SimulatorConv2d(ifmap,Weight);
 //        PW卷积
         result = K210Conv2d.SimulatorPWConv2d(psum,PWweight);
+        for (int i = 0; i < result.length; i++) {
+            System.out.println(Arrays.toString(result[i]));
+        }
     }
 }
