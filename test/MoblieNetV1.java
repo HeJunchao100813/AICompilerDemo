@@ -24,7 +24,7 @@ public class MoblieNetV1 {
 
     @Test
     public void Simulator() throws Exception {
-//        普通卷积
+//        DW卷积
         psum = K210Conv2d.SimulatorConv2d(ifmap,Weight);
 //        PW卷积
         result = K210Conv2d.SimulatorPWConv2d(psum,PWweight);
